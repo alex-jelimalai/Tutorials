@@ -16,7 +16,7 @@ public class BinarySearchTest {
 	private static BinarySearch binarySearch;
 
 	@BeforeClass
-	public static void setClassUp() {
+	public static void setUpClass() {
 		array = new int[] { 0, 2, 4, 6, 8, 10, 15, 20, 29 };
 		binarySearch = new BinarySearch();
 	}
