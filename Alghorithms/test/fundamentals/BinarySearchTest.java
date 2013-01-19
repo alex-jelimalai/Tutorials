@@ -1,42 +1,44 @@
 package fundamentals;
 
+import java.util.Arrays;
+import java.util.Collection;
+
 import org.junit.Assert;
+import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameters;
 
+@RunWith(value = Parameterized.class)
 public class BinarySearchTest {
+	private static int[] array;
+	private static BinarySearch binarySearch;
 
-	@Test
-	public void firtElement() {
-		int[] array = new int[] { 0, 2, 4, 6, 8, 10, 15, 20, 29 };
-		BinarySearch binarySearch = new BinarySearch();
-		Assert.assertEquals(0, binarySearch.search(0, array));
+	@BeforeClass
+	public static void setClassUp() {
+		array = new int[] { 0, 2, 4, 6, 8, 10, 15, 20, 29 };
+		binarySearch = new BinarySearch();
+	}
+
+	private int value;
+	private int expected;
+
+	public BinarySearchTest(int value, int expected) {
+		this.value = value;
+		this.expected = expected;
+	}
+
+	@Parameters
+	public static Collection<Integer[]> getTestParameters() {
+		return Arrays.asList(new Integer[][] { { 0, 0 }, { 6, 3 }, { 29, 8 },
+				{ 11, -1 } });
+
 	}
 
 	@Test
-	public void thirdElement() {
-		int[] array = new int[] { 0, 2, 4, 6, 8, 10, 15, 20, 29 };
-		BinarySearch binarySearch = new BinarySearch();
-		Assert.assertEquals(3, binarySearch.search(6, array));
+	public void elementIndex() {
+		Assert.assertEquals(expected, binarySearch.search(value, array));
 	}
 
-	
-	
-	@Test
-	public void lastElement() {
-		int[] array = new int[] { 0, 2, 4, 6, 8, 10, 15, 20, 29 };
-		BinarySearch binarySearch = new BinarySearch();
-		Assert.assertEquals(8, binarySearch.search(29, array));
-	}
-
-	
-	
-	//@Test
-	public void noExistingElement() {
-		int[] array = new int[] { 0, 2, 4, 6, 8, 10, 15, 20, 29 };
-		BinarySearch binarySearch = new BinarySearch();
-		Assert.assertEquals(11, binarySearch.search(-1, array));
-	}
-
-	
-	
 }
