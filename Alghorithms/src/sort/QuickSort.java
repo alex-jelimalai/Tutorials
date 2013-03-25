@@ -10,14 +10,11 @@ public class QuickSort {
 		if (aArray == null) {
 			throw new NullPointerException();
 		}
-		if(aArray.length == 0){
-			return;
-		}
 		sort(aArray, 0, aArray.length-1);
 	}
 
 	private void sort(int[] aArray, int lo, int hi) {
-		if(hi - lo < 2){
+		if(hi <= lo){
 			return;
 		}
 		int partitionIndex = partition(aArray, lo, hi);
