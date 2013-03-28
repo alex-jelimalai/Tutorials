@@ -1,11 +1,8 @@
 package sort;
 
-public class QuickSort {
-	/**
-	 * The sort represent just the principles. In the same way it can be
-	 * implemented for other primitive types or objects using Comparable
-	 * interface
-	 */
+public class QuickSort implements Sort{
+
+	@Override
 	public void sort(final int[] aArray) {
 		if (aArray == null) {
 			throw new NullPointerException();
