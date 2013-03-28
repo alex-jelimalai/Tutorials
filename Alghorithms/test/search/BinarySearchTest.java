@@ -1,4 +1,4 @@
-package fundamentals;
+package search;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -9,6 +9,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
+
+import search.BinarySearch;
 
 @RunWith(value = Parameterized.class)
 public class BinarySearchTest {
