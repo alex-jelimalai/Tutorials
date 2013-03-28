@@ -1,5 +1,7 @@
 package sort;
 
+import util.Utility;
+
 public class QuickSort implements Sort{
 
 	@Override
@@ -31,15 +33,10 @@ public class QuickSort implements Sort{
 			if(i>=j){
 				break;
 			}
-			exchange(aArray, i, j);
+		
+			Utility.exchange(aArray, i, j);
 		}
-		exchange(aArray, lo, j);
+		Utility.exchange(aArray, lo, j);
 		return j;
-	}
-	
-	private void exchange(int aArray[], int i, int j){
-		int aux = aArray[i];
-		aArray[i] = aArray[j];
-		aArray[j] = aux;
 	}
 }

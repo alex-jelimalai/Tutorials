@@ -1,5 +1,7 @@
 package sort;
 
+import util.Utility;
+
 public class BubleSort implements Sort {
 
 	@Override
@@ -8,9 +10,7 @@ public class BubleSort implements Sort {
 		for (int i = 0; i < aArray.length; i++) {
 			for (int j = 0; j < aArray.length - 1; j++) {
 				if (aArray[j] > aArray[j + 1]) {
-					aux = aArray[j];
-					aArray[j] = aArray[j + 1];
-					aArray[j + 1] = aux;
+					Utility.exchange(aArray, j, j+1);
 				}
 			}
 		}

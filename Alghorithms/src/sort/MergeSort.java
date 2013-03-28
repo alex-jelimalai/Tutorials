@@ -37,7 +37,6 @@ public class MergeSort implements Sort {
 				aArray[index] = auxArray[j++];
 			}
 		}
-
 	}
 
 	private void prepareAux(int[] aArray, int[] auxArray, int lo, int hi) {
