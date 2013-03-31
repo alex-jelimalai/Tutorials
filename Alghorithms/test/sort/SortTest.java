@@ -20,7 +20,7 @@ public class SortTest {
 	@Parameterized.Parameters
 	public static Collection primeNumbers() {
 		return Arrays.asList(new Object[][] { { new QuickSort() },
-				{ new MergeSort() }, {new BubleSort()},{new SelectionSort()} ,{new InsertSort()}});
+				{ new MergeSort() }, {new BubleSort()},{new SelectionSort()} ,{new InsertSort()},{new ShellSort()}});
 	}
 
 	@Test(expected = NullPointerException.class)
