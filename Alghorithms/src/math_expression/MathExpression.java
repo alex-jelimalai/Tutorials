@@ -19,14 +19,14 @@ public class MathExpression {
 				.replaceAll("\\)", "").replaceAll("/", "")
 				.replaceAll("\\*", "").replaceAll("-", "")
 				.replaceAll("\\+", "").isEmpty()) {
-			throw new InvalidMathemeticalException(
+			throw new InvalidMathematicalException(
 					"The mathatical expression contains invalid symbols");
 		}
 	}
 
 	private void validateNull(final String aExpression) {
 		if (aExpression == null || aExpression.isEmpty()) {
-			throw new InvalidMathemeticalException(
+			throw new InvalidMathematicalException(
 					EMPTY_OR_NULL_EXPRESSION_MESSAGE);
 		}
 	}

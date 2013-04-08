@@ -13,17 +13,17 @@ public class MathExpressionTest {
 	}
 	
 	
-	@Test(expected = InvalidMathemeticalException.class)
+	@Test(expected = InvalidMathematicalException.class)
 	public void nullTest(){
 		mathExpression.calculate(null);
 	}
 	
-	@Test(expected = InvalidMathemeticalException.class)
+	@Test(expected = InvalidMathematicalException.class)
 	public void emptySymbol(){
 		mathExpression.calculate("");
 	}
 	
-	@Test(expected = InvalidMathemeticalException.class)
+	@Test(expected = InvalidMathematicalException.class)
 	public void invalidSymbol(){
 		mathExpression.calculate("sd");
 	}
